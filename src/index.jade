@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+  head
+    title= PostBin
+  body
+    div(id='root')
+  if PROD
+    script(src='')
+  else
+    script(src='/static/bundle.js')
