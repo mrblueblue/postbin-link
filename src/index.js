@@ -1,15 +1,17 @@
 import React from 'react';
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom';
 import {Router, Route} from 'react-router'
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+
 import Home from './pages/Home';
-import Bin from './pages/Bin'
+import PostBin from './pages/PostBin'
 
-import './styles/styles.css'
+import './styles/styles.css';
 
-render((
-  <Router>
+ReactDOM.render((
+  <Router history={createBrowserHistory()}>
     <Route path='/' component={Home} />
-    <Route path=':binurl' component={Bin} />
+      <Route path=':id' component={PostBin}/>
+    <Route/>
   </Router>
 ), document.getElementById('root'));
-
