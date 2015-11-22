@@ -19,7 +19,7 @@ app.get('*', function(req, res) {
   res.render(path.join(__dirname, 'src', 'index.jade'));
 });
 
-app.listen(3000, 'localhost', function(err) {
+app.listen(3001, 'localhost', function(err) {
   if (err) {
     console.log(err);
     return;
