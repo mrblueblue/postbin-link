@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
-
+import {host} from '../config';
 const request = (url) => fetch(url).then((res) => res.json())
 
 export default {
-  getBinId: () => request('http://localhost:9000/bin')
+  getBinId: () => request(`${host}/bin`)
 }

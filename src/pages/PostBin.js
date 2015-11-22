@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import socket from '../utils/socket'
 import onSetup from '../utils/onSetup';
 
-const setup = ({params, actions}) => {
-  socket.on(params.id, (data) => console.log({id: id, post: data}) )
+const subscribe = ({props}) => {
+  const {id} = props.params;
+  console.log(id)
+  socket.on(id, (data) => console.log(data))
 }
 
 const PostBin = (props) => (
@@ -12,4 +14,4 @@ const PostBin = (props) => (
   </div>
 )
 
-export default PostBin
+export default onSetup(subscribe)(PostBin)

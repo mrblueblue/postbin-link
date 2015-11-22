@@ -4,7 +4,7 @@ import api from '../utils/api';
 import withContext from 'recompose/withContext';
 
 const Home = ({history}) => {
-
+  console.log(process.env.NODE_ENV)
   function createBin(){
     api.getBinId()
       .then((data) => history.push(`/${data.id}`))

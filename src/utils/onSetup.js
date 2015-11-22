@@ -1,4 +1,4 @@
 import lifecycle from 'recompose/lifecycle';
 export default function onSetup(setup) {
-  return lifecycle(setup, () => null)
+  return lifecycle(setup, () => null);
 }
