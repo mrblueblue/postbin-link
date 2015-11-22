@@ -30,11 +30,16 @@
     "webpack-hot-middleware": "^2.0.0"
   },
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.3",
+    "isomorphic-fetch": "^2.2.0",
     "react": "^0.14.1",
     "react-dom": "^0.14.1",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0-rc3",
-    "redux": "^3.0.4"
+    "recompose": "^0.11.2",
+    "redux": "^3.0.4",
+    "shortid": "^2.2.4",
+    "superagent": "^1.4.0"
   }
 }
