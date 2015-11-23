@@ -5,12 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build:jade": "jade ./src/index.jade -O '{ \"PROD\": true }' -output ./src/dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "start:app": "NODE_PATH=./src node index.js",
-    "start:dev": "node webpack.server.js",
-    "start": "npm run start:app"
+    "start": "node index.js"
   },
   "author": "Jonathan Huang",
   "license": "MIT",

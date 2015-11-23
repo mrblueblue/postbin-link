@@ -7,7 +7,10 @@ import compose from 'recompose/compose';
 const subscribe = ({props}) => {
   const {id} = props.params;
   const {addRequest} = props.actions
-  socket.on(id, (data) => addRequest(data))
+  socket.on(id, (data) => {
+    console.log(data)
+    addRequest(data)
+  })
 }
 
 const PostBin = ({requests, params}) => (
