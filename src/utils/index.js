@@ -1,4 +1,5 @@
 import shortid from 'shortid';
-export default function generateBinId(){
+
+export function generateBinId(){
   return shortid.generate();
 }

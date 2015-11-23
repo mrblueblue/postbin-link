@@ -5,7 +5,7 @@ import io from 'socket.io';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 
-import generateBinId from './src/utils/generateBinId';
+import {generateBinId} from './src/utils';
 
 const app = express();
 const server = http.createServer(app);
@@ -20,7 +20,6 @@ app.get('/bin', (req, res) => {
 });
 
 app.post('/:postbin', (req, res) => {
-  console.log(req)
   ws.emit(req.params.postbin, {
     headers: req.headers,
     body: req.body,

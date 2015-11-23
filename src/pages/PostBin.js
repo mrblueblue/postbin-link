@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
 import socket from '../utils/socket'
 import onSetup from '../utils/onSetup';
+import compose from 'recompose/compose';
 
 const subscribe = ({props}) => {
   const {id} = props.params;
-  console.log(id)
   socket.on(id, (data) => console.log(data))
 }
 
-const PostBin = (props) => (
+const PostBin = ({requests, params}) => (
   <div>
-    <p>{props.params.id}</p>
+    <p>Yo DAWG</p>
+    <p>{params.id}</p>
   </div>
 )
 
