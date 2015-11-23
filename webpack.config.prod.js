@@ -26,6 +26,7 @@ module.exports = {
       }
     })
   ],
+  resolve: require('./webpack.resolve'),
   module: {
     loaders: [
       {

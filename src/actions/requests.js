@@ -1,4 +1,4 @@
-import {ADD_REQUEST} from '../constants';
+import {ADD_REQUEST} from 'constants';
 
 export function addRequest(request){
   return {

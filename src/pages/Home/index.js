@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import api from '../../utils/api';
+import api from 'utils/api';
 
 export default function Home({history, pushState}){
 

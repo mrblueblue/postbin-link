@@ -19,6 +19,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development')
     })
   ],
+  resolve: require('./webpack.resolve'),
   module: {
     loaders: [
       {

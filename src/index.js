@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './containers/Root';
+import Root from 'containers/Root';
 
-import './styles/styles.css';
+import 'styles/styles.css';
 
 ReactDOM.render(
   <Root />,
