@@ -1,6 +1,6 @@
 {
   "name": "postbin-link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "save and inspect your post requests",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "build:jade": "jade ./src/index.jade -O '{ \"PROD\": true }' -output ./src/dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node devServer.js & node index.js"
+    "start:app": "NODE_PATH=./src node index.js",
+    "start:dev": "node webpack.server.js",
+    "start": "npm run start:app"
   },
   "author": "Jonathan Huang",
   "license": "MIT",
