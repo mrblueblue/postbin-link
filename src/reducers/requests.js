@@ -1,6 +1,6 @@
-import {ADD_REQUEST} from '../actions/requests';
+import {ADD_REQUEST} from '../constants';
 
-export function requests(state = [], action){
+export default function requests(state = [], action){
   switch (action.type) {
     case ADD_REQUEST:
       return state.concat(action.payload);

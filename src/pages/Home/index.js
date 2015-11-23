@@ -1,10 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
-import {Link} from 'react-router';
+import React, {PropTypes} from 'react';
+import api from '../../utils/api';
 
-import api from '../utils/api';
-
-const Home = ({history, pushState}) => {
+export default function Home({history, pushState}){
 
   function createBin(){
     api.getBinId()
@@ -23,13 +20,3 @@ const Home = ({history, pushState}) => {
     </div>
   );
 }
-
-function mapStateToProps(state){
-  return {state};
-}
-
-function mapDispatchToProps(dispatch){
-  return {dispatch};
-}
-
-export default connect(mapStateToProps)(Home)
